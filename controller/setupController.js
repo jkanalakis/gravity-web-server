@@ -78,7 +78,7 @@ exports.database.update =  async function(req, res){
 
 exports.stripe = async function(req, res){
 
-  const frontendSettings = require('../client/src/settings.json');
+  const frontendSettings = require('../../client/src/settings.json');
   let settings = backendSettings.stripe;
   settings.publishableAPIKey = frontendSettings.development.stripe.publishableAPIKey;
   return res.status(200).send({ data: settings });

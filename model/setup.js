@@ -151,7 +151,7 @@ exports.stripe = async function(secretAPIKey, freePlan){
 
 exports.client = async function(data, mode){
 
-  let settingsFile = require('../client/src/settings.json');
+  let settingsFile = require('../../client/src/settings.json');
 
   Object.keys(data).map(key => {
 
@@ -159,7 +159,7 @@ exports.client = async function(data, mode){
 
   })
 
-  return await fs.writeFile('client/src/settings.json', JSON.stringify(settingsFile, null, 2));
+  return await fs.writeFile('../client/src/settings.json', JSON.stringify(settingsFile, null, 2));
 
 }
 
