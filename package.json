@@ -54,7 +54,7 @@
     "client": "cd ../client && npm start",
     "server": "nodemon server.js",
     "app": "cd ../app && expo start",
-    "dev": "concurrently --kill-others \"npm run server\" \"node bin/clientcheck && npm run client\"",
+    "dev": "node bin/start",
     "test": "mocha test/run --exit",
     "heroku-postbuild": "node bin/clientcheck && cd client && npm install && npm run build"
   },
