@@ -15,7 +15,9 @@ async function run(){
         if (fs.existsSync(`../${folder}`)){
         
           success = true;
-          fs.rename(`../${folder}`, `../${renameTo}`, () => {});
+
+          if (folder !== renameTo)
+            fs.rename(`../${folder}`, `../${renameTo}`, () => {});
 
         }
       }
