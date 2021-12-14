@@ -28,6 +28,7 @@
     "jsonwebtoken": "^8.5.1",
     "knex": "0.95.14",
     "mongo": "^0.1.0",
+    "mongodb": "4.2.2",
     "mongoose": "6.1.1",
     "multer": "^1.4.3",
     "mysql2": "2.3.3",
@@ -39,8 +40,7 @@
     "randomstring": "^1.2.1",
     "speakeasy": "^2.0.0",
     "stripe": "8.191.0",
-    "uuid": "^8.3.2",
-    "mongodb": "4.2.2"
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "chai": "^4.3.4",
@@ -50,7 +50,7 @@
     "nodemon": "^2.0.15"
   },
   "scripts": {
-    "setup": "node bin/installcheck && npm install && npm link; node bin/clientcheck && cd ../client && npm install; cd ../server && node bin/appcheck && cd ../app && npm install && node bin/setup.js && cd ../server; npm run dev",
+    "setup": "node bin/installcheck && npm install && npm link; node bin/clientcheck && cd ../client && npm install; cd ../server && node bin/appcheck && cd ../app && npm install && cd ../server && node bin/setup.js; npm run dev",
     "client": "cd ../client && npm start",
     "server": "nodemon server.js",
     "app": "cd ../app && expo start",
